@@ -523,9 +523,42 @@ header .logo img {
     text-align: center !important;
 }
 
-/* Điện thoại */
-@media (max-width: 768px) {
-    .projects {
-        grid-template-columns: 1fr !important;
-    }
+/* ===== 3 CÔNG TRÌNH HIỂN THỊ NGANG ===== */
+
+.projects {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 25px !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 40px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+.projects .project-card {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.projects .project-card img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 10px !important;
+}
+
+.projects .project-card h3 {
+    text-align: center !important;
+    margin: 12px 0 5px !important;
+}
+
+.projects .project-card p {
+    text-align: center !important;
+    margin: 0 0 20px !important;
 }
