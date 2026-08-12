@@ -431,3 +431,54 @@ header .logo img {
     object-fit: contain;
     display: block;
 }
+/* ===== CÔNG TRÌNH THỰC TẾ ===== */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    margin: 16px 10px 8px;
+    color: #0b3563;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.project-card p {
+    margin: 0 10px 20px;
+    color: #666;
+    font-size: 15px;
+}
+
+/* Điện thoại */
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+}
