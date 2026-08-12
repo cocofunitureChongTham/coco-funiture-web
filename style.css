@@ -627,37 +627,9 @@ header .logo img {
 /* Hiển thị đẹp trên điện thoại */
 @media (max-width: 768px) {
 
-    .floating-contact {
-        right: 12px;
-        bottom: 15px;
-        gap: 9px;
-    }
-
-    .contact-btn {
-        width: 46px;
-        height: 46px;
-    }
-
-    .contact-btn.facebook {
-        font-size: 24px;
-    }
-
-    .contact-btn.zalo {
-        font-size: 11px;
-    }
-
-    .contact-btn.phone {
-        font-size: 22px;
-    }
-}
-.floating-contact
-.contact-btn
-.contact-btn.facebook
-.contact-btn.zalo
-.contact-btn.phone
-/* ==============================
-   NÚT LIÊN HỆ LOGO CHUYÊN NGHIỆP
-   ============================== */
+  /* =========================================
+   NÚT LIÊN HỆ NHẤP NHÁY - COCO FUNITURE
+   ========================================= */
 
 .floating-contact {
     position: fixed;
@@ -667,7 +639,7 @@ header .logo img {
 
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
 }
 
 /* Nút tròn */
@@ -681,89 +653,125 @@ header .logo img {
     align-items: center;
     justify-content: center;
 
+    position: relative;
+
+    color: white;
     text-decoration: none;
 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.22);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.22);
 
-    transition: all 0.25s ease;
-
-    position: relative;
+    transition: transform 0.25s ease;
 }
 
-/* Icon SVG */
-.contact-btn svg {
-    width: 29px;
-    height: 29px;
-
-    fill: #ffffff;
-
-    display: block;
-}
-
-/* Facebook */
-.contact-btn.facebook {
-    background: #1877F2;
-}
-
-/* Zalo */
-.contact-btn.zalo {
-    background: #0068FF;
-}
-
-.contact-btn.zalo span {
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-}
-
-/* Gọi điện */
-.contact-btn.phone {
-    background: #16A34A;
-}
-
-/* Hover */
-.contact-btn:hover {
-    transform: scale(1.12);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.30);
-}
-
-/* Vòng sáng */
-.contact-btn::after {
+/* VÒNG NHẤP NHÁY */
+.contact-btn::before {
     content: "";
 
     position: absolute;
 
-    inset: -3px;
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
 
     border-radius: 50%;
 
-    border: 2px solid rgba(255,255,255,0.5);
-
-    opacity: 0;
-
-    transform: scale(0.8);
-
-    transition: all 0.25s ease;
+    animation: contactPulse 1.8s infinite;
 }
 
-.contact-btn:hover::after {
-    opacity: 1;
-    transform: scale(1);
+/* Hiệu ứng lan ra ngoài */
+@keyframes contactPulse {
+
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    70% {
+        transform: scale(1.55);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.55);
+        opacity: 0;
+    }
 }
 
-/* Điện thoại */
+/* FACEBOOK */
+.contact-btn.facebook {
+    background: #1877F2;
+}
+
+.contact-btn.facebook::before {
+    background: rgba(24, 119, 242, 0.55);
+}
+
+/* ZALO */
+.contact-btn.zalo {
+    background: #0068FF;
+}
+
+.contact-btn.zalo::before {
+    background: rgba(0, 104, 255, 0.55);
+}
+
+/* GỌI ĐIỆN */
+.contact-btn.phone {
+    background: #16A34A;
+}
+
+.contact-btn.phone::before {
+    background: rgba(22, 163, 74, 0.55);
+}
+
+
+/* Icon nằm trên vòng sáng */
+.contact-btn svg,
+.contact-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Icon */
+.contact-btn svg {
+    width: 29px;
+    height: 29px;
+    fill: white;
+}
+
+/* Chữ Zalo */
+.contact-btn span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* RÊ CHUỘT */
+.contact-btn:hover {
+    transform: scale(1.12);
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.35);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
 @media (max-width: 768px) {
 
     .floating-contact {
         right: 12px;
         bottom: 18px;
-        gap: 9px;
+        gap: 12px;
     }
 
     .contact-btn {
-        width: 48px;
-        height: 48px;
+        width: 50px;
+        height: 50px;
     }
 
     .contact-btn svg {
@@ -771,7 +779,7 @@ header .logo img {
         height: 25px;
     }
 
-    .contact-btn.zalo span {
-        font-size: 11px;
+    .contact-btn span {
+        font-size: 10px;
     }
 }
