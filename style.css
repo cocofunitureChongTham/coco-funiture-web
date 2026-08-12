@@ -523,12 +523,13 @@ header .logo img {
     text-align: center !important;
 }
 
-/* ===== 3 CÔNG TRÌNH HIỂN THỊ NGANG ===== */
+/* ===== 3 CÔNG TRÌNH NGANG ===== */
 
-.projects {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 25px !important;
+#cong-trinh .projects {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 24px !important;
     width: 100% !important;
     max-width: 1200px !important;
     margin: 40px auto !important;
@@ -536,29 +537,30 @@ header .logo img {
     box-sizing: border-box !important;
 }
 
-.projects .project-card {
-    display: block !important;
-    width: 100% !important;
+#cong-trinh .project-card {
+    flex: 1 1 0 !important;
+    width: 33.333% !important;
+    min-width: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box !important;
 }
 
-.projects .project-card img {
+#cong-trinh .project-card img {
+    display: block !important;
     width: 100% !important;
     height: auto !important;
     aspect-ratio: 4 / 3 !important;
     object-fit: cover !important;
-    display: block !important;
     border-radius: 10px !important;
 }
 
-.projects .project-card h3 {
+#cong-trinh .project-card h3 {
     text-align: center !important;
     margin: 12px 0 5px !important;
 }
 
-.projects .project-card p {
+#cong-trinh .project-card p {
     text-align: center !important;
     margin: 0 0 20px !important;
 }
