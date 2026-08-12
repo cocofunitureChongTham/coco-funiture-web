@@ -427,7 +427,7 @@ footer span {
 }
 header .logo img {
     width: 100px !important;
-    height: 40px !important;
+    height: 50px !important;
     object-fit: contain;
     display: block;
 }
