@@ -45,7 +45,11 @@ header {
 .logo span {
     color: #e52b2b;
 }
-
+.logo img {
+    width: 120px;
+    height: auto;
+    display: block;
+}
 nav {
     display: flex;
     gap: 28px;
