@@ -650,3 +650,128 @@ header .logo img {
         font-size: 22px;
     }
 }
+.floating-contact
+.contact-btn
+.contact-btn.facebook
+.contact-btn.zalo
+.contact-btn.phone
+/* ==============================
+   NÚT LIÊN HỆ LOGO CHUYÊN NGHIỆP
+   ============================== */
+
+.floating-contact {
+    position: fixed;
+    right: 22px;
+    bottom: 25px;
+    z-index: 99999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Nút tròn */
+.contact-btn {
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.22);
+
+    transition: all 0.25s ease;
+
+    position: relative;
+}
+
+/* Icon SVG */
+.contact-btn svg {
+    width: 29px;
+    height: 29px;
+
+    fill: #ffffff;
+
+    display: block;
+}
+
+/* Facebook */
+.contact-btn.facebook {
+    background: #1877F2;
+}
+
+/* Zalo */
+.contact-btn.zalo {
+    background: #0068FF;
+}
+
+.contact-btn.zalo span {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Gọi điện */
+.contact-btn.phone {
+    background: #16A34A;
+}
+
+/* Hover */
+.contact-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.30);
+}
+
+/* Vòng sáng */
+.contact-btn::after {
+    content: "";
+
+    position: absolute;
+
+    inset: -3px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255,255,255,0.5);
+
+    opacity: 0;
+
+    transform: scale(0.8);
+
+    transition: all 0.25s ease;
+}
+
+.contact-btn:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Điện thoại */
+@media (max-width: 768px) {
+
+    .floating-contact {
+        right: 12px;
+        bottom: 18px;
+        gap: 9px;
+    }
+
+    .contact-btn {
+        width: 48px;
+        height: 48px;
+    }
+
+    .contact-btn svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .contact-btn.zalo span {
+        font-size: 11px;
+    }
+}
