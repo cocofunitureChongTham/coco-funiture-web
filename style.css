@@ -564,3 +564,89 @@ header .logo img {
     text-align: center !important;
     margin: 0 0 20px !important;
 }
+/* ========================================
+   NÚT LIÊN HỆ NỔI FACEBOOK - ZALO - GỌI
+   ======================================== */
+
+.floating-contact {
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+    z-index: 99999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Khung từng nút */
+.contact-btn {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi rê chuột */
+.contact-btn:hover {
+    transform: scale(1.12);
+}
+
+/* FACEBOOK */
+.contact-btn.facebook {
+    background: #1877F2;
+    font-size: 28px;
+}
+
+/* ZALO */
+.contact-btn.zalo {
+    background: #0068FF;
+    font-size: 13px;
+}
+
+/* GỌI ĐIỆN */
+.contact-btn.phone {
+    background: #16A34A;
+    font-size: 25px;
+}
+
+/* Hiển thị đẹp trên điện thoại */
+@media (max-width: 768px) {
+
+    .floating-contact {
+        right: 12px;
+        bottom: 15px;
+        gap: 9px;
+    }
+
+    .contact-btn {
+        width: 46px;
+        height: 46px;
+    }
+
+    .contact-btn.facebook {
+        font-size: 24px;
+    }
+
+    .contact-btn.zalo {
+        font-size: 11px;
+    }
+
+    .contact-btn.phone {
+        font-size: 22px;
+    }
+}
